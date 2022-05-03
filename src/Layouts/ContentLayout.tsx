@@ -3,6 +3,7 @@ import { Content } from 'antd/lib/layout/layout'
 import { observer } from 'mobx-react-lite'
 import { useEffect } from 'react'
 import  { Note } from '../components/CustomForm/Notes/Note'
+import { Login } from '../components/Login/Form/Login'
 import { useRootStore } from '../index'
 import { IContentModel } from '../interfaces/interfaces'
 import { CardCustom } from './CardCustom'
@@ -20,7 +21,7 @@ export const ContentLayout = observer(() => {
     return (
         <>
             <Content style={ { padding: '0 50px' } }>
-                <Breadcrumb style={ { margin: '16px 0' } }>
+                {/* <Breadcrumb style={ { margin: '16px 0' } }>
                     <Breadcrumb.Item>Home</Breadcrumb.Item>
                     <Breadcrumb.Item>List</Breadcrumb.Item>
                     <Breadcrumb.Item>App</Breadcrumb.Item>
@@ -47,6 +48,11 @@ export const ContentLayout = observer(() => {
                     })
                     }
 
+                </div> */}
+
+                <div className="style-layout-content">
+                    <br />
+                    <Login />
                 </div>
             </Content>
             <Footer style={ { textAlign: 'center' } }>Ant Design ©2018 Created by Ant UED</Footer>
