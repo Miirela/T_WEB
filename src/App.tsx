@@ -24,7 +24,6 @@ function App() {
         <>
             <Layout className='layout'>
                 <HeaderLayout />
-                <ContentLayout />
             </Layout>
         </>
     )

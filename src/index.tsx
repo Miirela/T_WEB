@@ -7,6 +7,7 @@ import { ILoginStore, IRootStore } from './interfaces/interfaces'
 import storeProvider from './mst/stores/StoreProvider'
 import reportWebVitals from './reportWebVitals'
 import { myStore } from './components/Login/LoginProvider'
+import { BrowserRouter } from "react-router-dom";
 
 const StoreContext = React.createContext<IRootStore | any>(null)
 const LoginContext = React.createContext<ILoginStore | any>(null)
@@ -32,11 +33,13 @@ const LoginProvider = ({ children }: { children: ReactElement }) => {
 
 ReactDOM.render(
     <React.StrictMode>
-        <StoreProvider>
-            <LoginProvider>
-                <App />
-            </LoginProvider>
-        </StoreProvider>
+        <BrowserRouter>
+            <StoreProvider>
+                <LoginProvider>
+                    <App />
+                </LoginProvider>
+            </StoreProvider>
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
 )
